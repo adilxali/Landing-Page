@@ -727,8 +727,14 @@ h3 {
     overflow: hidden;
 }
 
+.s-left {
+    position: relative;
+    z-index: -1;
+    width: 200%;
+}
+
 .choose-content {
-    min-height: 45px;
+    min-height: 125px;
     padding: 20px;
     background: white;
 }
@@ -739,7 +745,7 @@ h3 {
 
 .choose-content:hover h4 {
     color: white;
-    font-size: 24px;
+    width: 100%;
 }
 
 #skill {
