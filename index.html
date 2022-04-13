@@ -15,6 +15,27 @@
 
 
 <body>
+
+    <div class="search-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-form">
+                    <div class="cross" onmouseover="rotate()">
+                        <div class="cross1"></div>
+                        <div class="cross2"></div>
+                    </div>
+                    <div class="form">
+                        <div class="left-inner-addon">
+                            <input type="text" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="top-bar">
         <div class="container">
             <div class="row">
@@ -87,11 +108,57 @@
 
 
                         <div class="menu-list row j-center a-center">
-                            <a href="#">Home</a>
-                            <a href="#">Services</a>
-                            <a href="#">Page</a>
-                            <a href="#">News</a>
-                            <a href="#">Contact Us</a>
+                            <ul id="main-menu">
+                                <li class="menu-item">
+                                    <a href="#">Home</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Home One</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Services</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Service Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Page</a>
+                                    <ul class="submenu">
+
+                                        <li><a href="about.html">About Us</a>
+                                        </li>
+                                        <li><a href="pricing.html">Pricing</a>
+                                        </li>
+                                        <li><a href="faq.html">FAQS</a>
+                                        </li>
+                                        <li><a href="project.html">Projects</a>
+                                        </li>
+                                        <li><a href="project-details.html">Projects Details</a>
+                                        </li>
+                                        <li><a href="team.html">Team</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">News</a>
+                                    <ul class="submenu">
+
+                                        <li><a href="blog-grid.html">Blog Grid</a>
+                                        </li>
+                                        <li><a href="blog-standard.html">Blog Standard</a>
+                                        </li>
+                                        <li><a href="blog-single.html">Blog Single</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Contact Us</a>
+
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="menu-bar  d-flex j-between a-center">
@@ -1013,6 +1080,7 @@
         <h1>video document</h1>
     </div>
     <script src="./script/script.js"></script>
+
 </body>
 
 </html>
