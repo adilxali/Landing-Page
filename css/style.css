@@ -169,7 +169,7 @@ select {
 .social-media svg {
     margin: 0 10px;
     color: white;
-    transition: color 3s ease-in 0;
+    transition: color 3s ease-in;
 }
 
 .social-media svg:hover {
@@ -181,7 +181,7 @@ select {
 }
 
 .logo {
-    padding: 1 15px;
+    padding: 0 15px;
 }
 
 .logo img {
@@ -244,6 +244,10 @@ img {
     left: 10px;
 }
 
+.submenu:hover #main-menu li a {
+    color: #2981E9;
+}
+
 .menu-list a {
     padding: 0 15px;
     color: black;
@@ -278,11 +282,26 @@ img {
     line-height: 60px;
 }
 
-.navigation {
-    position: sticky;
+.hamberger {
+    display: none;
+    z-index: 999999999999;
+}
+
+.hamberger-pop {
+    position: fixed;
+    float: right;
+    width: 460px;
+}
+
+.navigationS {
+    width: 100%;
+    display: block;
+    position: fixed;
     top: 0px;
     background: white;
     z-index: 9;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
+    transition: all .3s ease-in-out;
 }
 
 .nav-bar {
@@ -628,15 +647,6 @@ img {
 svg {
     vertical-align: middle;
     color: #2981E9;
-}
-
-.pro-abt {
-    transform: scale(.9);
-    transition: all .2s ease-in-out;
-}
-
-.pro-abt:hover {
-    transform: scale(1.1);
 }
 
 .pro-abt h2 {
@@ -1352,7 +1362,6 @@ input[type="text"] {
         width: 100%;
     }
     .info {
-        display: visible;
         text-align: center;
         border: 0;
         border-bottom: 1px solid gray;
@@ -1371,7 +1380,7 @@ input[type="text"] {
         width: 75%;
         font-size: 30px;
         line-height: 50px;
-        font-weight: 900px;
+        /* font-weight: 500px; */
     }
     .about-company {
         padding: 0;
@@ -1448,36 +1457,25 @@ input[type="text"] {
 }
 
 .cross {
-    width: 30px;
-    height: 30px;
+    overflow: hidden;
+    width: 20px;
     display: block;
     z-index: 99999999999;
-}
-
-.cross {
     position: fixed;
-    right: 0;
+    right: 25px;
     cursor: pointer;
 }
 
-.cross1,
-.cross2 {
-    position: absolute;
-    height: 3px;
-    width: 33px;
-    background: white;
-    right: 30px;
-    top: 30px;
-    transition: all .3s ease-in;
+.cross img {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
-.cross1 {
-    transform: rotate(45deg);
-}
 
-.cross2 {
-    transform: rotate(135deg);
-}
+/* .cross:hover img {
+    transform: scale(1) rotate(180deg);
+} */
 
 .left-inner-addon {
     position: absolute;
@@ -1493,16 +1491,46 @@ input[type="text"] {
     top: 30px;
 }
 
-.search-container {
+.search-up {
+    visibility: visible;
+    position: fixed;
     width: 100%;
     height: 100%;
+    background-color: rgba(9, 9, 9, 0.1);
+    bottom: -100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    z-index: 99999999;
+    transition: all 1s ease-in-out;
+}
+
+.search-down {
+    visibility: visible;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: rgba(9, 9, 9, 0.1);
+    bottom: 0;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    z-index: 99999999;
+    transition: all 1s ease-in-out;
+}
+
+.search-container {
+    width: 100%;
+    height: 0%;
     bottom: 100%;
+    /* top: 100%; */
+    visibility: hidden;
     position: fixed;
     background-color: rgba(9, 9, 9, 0.1);
     margin: 0;
     padding: 0;
     z-index: 9999999;
-    transition: all 1s ease-in-out;
 }
 
 .search-container .row {
@@ -1512,4 +1540,9 @@ input[type="text"] {
 
 .search {
     cursor: pointer;
+}
+
+.h-close {
+    background: linear-gradient(270deg, #2981E9 0%, #3C48DD 100%);
+    ;
 }

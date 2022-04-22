@@ -1,26 +1,44 @@
 const cross = document.querySelector('.cross');
-const cross1 = document.querySelector('.cross1');
-const cross2 = document.querySelector('.cross2');
 const search_container = document.querySelector('.search-container');
 const search_icon = document.querySelector('.search');
+const nav = document.querySelector('.navigation')
 search_icon.style.cursor = 'pointer';
-cross1.style.transition = 'all .3s ease';
-cross2.style.transition = 'all .3s ease';
+
+cross.addEventListener('mouseover', () => {
+    cross.style.transform = 'rotate(18deg)';
+
+
+    console.log('Adil ')
+})
+
+window.onscroll = function() { scrolli() };
+
+function scrolli() {
+
+    if (scrollY > 350) {
+        nav.className = 'navigationS';
+        console.log('work')
+    } else {
+        nav.className = 'navigation';
+    }
+
+
+
+}
+
+
 search_icon.addEventListener('click', () => {
 
-    search_container.style.bottom = '0%';
-    search_container.style.background = 'black';
+
+    search_container.classList = 'search-down';
+
 
     console.log('hello');
 });
 cross.addEventListener('click', () => {
+    search_container.className = "search-up";
 
-    search_container.style.bottom = '100%';
-    search_container.style.background = 'rgba(9, 9, 9, 0.1)';
+    // search_container.className = 'search-container';
+
 
 });
-
-function rotate() {
-    cross1.style.rotate = '180deg';
-    cross2.style.rotate = '180deg';
-}
