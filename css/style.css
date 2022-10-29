@@ -294,12 +294,12 @@ img {
 }
 
 .navigationS {
-    width: 100%;
-    display: block;
     position: fixed;
     top: 0px;
-    background: white;
-    z-index: 9;
+    width: 100%;
+    
+    padding: 60px;
+    
     box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
     transition: all .3s ease-in-out;
 }
@@ -1466,16 +1466,21 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.cross img {
+.close-s {
     transition: all 0.3s;
     box-sizing: border-box;
     max-width: 100%;
 }
 
+.close-s:hover {
+    animation: rotate .3s ease-in;
+}
 
-/* .cross:hover img {
-    transform: scale(1) rotate(180deg);
-} */
+@keyframes rotate {
+    0% {
+        transform: rotate(-180deg);
+    }
+}
 
 .left-inner-addon {
     position: absolute;
